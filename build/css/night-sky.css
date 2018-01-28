@@ -1,2 +1,10 @@
 .night-sky {
   background: linear-gradient(#2d313c, #354444); }
+  .night-sky footer {
+    width: 100%; }
+    .night-sky footer .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: rem-calc(20) solid transparent;
+      border-right: rem-calc(20) solid transparent;
+      border-top: rem-calc(18) solid #fff; }

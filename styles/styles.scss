@@ -1,7 +1,15 @@
 @import 'functions';
+@import 'variables';
 
 body {
     margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fff;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 100;
+        margin: rem-calc(8 0);
+    }
 
     .panel {
         height: 100vh;
@@ -9,8 +17,10 @@ body {
         width: 100%;
         min-width: rem-calc(300);
 
-        background-color: #f0ff0f;
+        display: flex;
+        flex-direction: column;
+        background-color: $dark-ground;
+
+        @import 'night-sky';
     }
 }
-
-@import 'night-sky';

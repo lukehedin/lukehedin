@@ -16,8 +16,9 @@ gulp.task('lint', function() {
 });
 
 // Compile Our Sass
+//LH: We only compile the top level styles.scss file, it imports the rest
 gulp.task('sass', function() {
-    return gulp.src('styles/*.scss')
+    return gulp.src('styles/styles.scss')
         .pipe(sass())
         .pipe(gulp.dest('build/css'));
 });
