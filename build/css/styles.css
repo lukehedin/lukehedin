@@ -1,0 +1,12 @@
+/* rem-calc function for easy pixel to rem conversion*/
+body {
+  margin: 0; }
+  body .panel {
+    height: 100vh;
+    min-height: 18.75rem;
+    width: 100%;
+    min-width: 18.75rem;
+    background-color: #f0ff0f; }
+
+.night-sky {
+  background: linear-gradient(#2d313c, #354444); }
