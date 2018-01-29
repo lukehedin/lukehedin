@@ -1,4 +1,11 @@
+/*jshint esversion: 6 */
+
 var LukeHedin = {
+    //returns a random number between min and max
+    getRandom: function(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    },
+
     getMaxWidthOrHeight: function(){
         return $(window).width() < $(window).height() ? $(window).width() : $(window).height();
     },
@@ -25,6 +32,16 @@ var LukeHedin = {
         var rectEl = $(elSelector);
         
         rectEl.css('height', (scaleAmount / division) + 'px');
+    },
+
+    scaleSquare: function(elSelector, division){
+        var LukeHedin = this;
+
+        var scaleAmount = LukeHedin.getMaxWidthOrHeight();
+        var rectEl = $(elSelector);
+        
+        rectEl.css('height', (scaleAmount / division) + 'px');
+        rectEl.css('width', (scaleAmount / division) + 'px');
     }
 };
 
@@ -32,6 +49,6 @@ $(document).on('ready', function(e){
     NightSky.draw();
     
     $(window).on('resize', function(e){
-        NightSky.refreshScale();
+        NightSky.refresh();
     });
 });
