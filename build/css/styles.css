@@ -18,10 +18,43 @@ body {
       flex-direction: column;
       background: linear-gradient(#2d313c, #354444); }
       body .panel.night-sky header {
-        flex-grow: 2; }
+        flex-grow: 1; }
       body .panel.night-sky .content {
-        flex-grow: 5;
-        width: 100%; }
+        flex-grow: 8;
+        width: 100%;
+        position: relative;
+        overflow: hidden; }
+        body .panel.night-sky .content .triangle {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-color: transparent; }
+        body .panel.night-sky .content .mountain {
+          position: absolute;
+          bottom: 0;
+          border-top: none; }
+        body .panel.night-sky .content .mountain-a {
+          left: -6%;
+          border-bottom-color: #2d3538; }
+        body .panel.night-sky .content .mountain-b {
+          right: 16%;
+          border-bottom-color: #282f32; }
+        body .panel.night-sky .content .mountain-c {
+          right: -16%;
+          border-bottom-color: #262c2e; }
+        body .panel.night-sky .content .treeline {
+          position: absolute;
+          bottom: 0;
+          display: flex;
+          width: 100%;
+          height: 10%; }
+          body .panel.night-sky .content .treeline .tree {
+            bottom: 0;
+            border-top: none; }
+          body .panel.night-sky .content .treeline.treeline-a .tree {
+            border-bottom-color: #181b1f; }
+          body .panel.night-sky .content .treeline.treeline-b .tree {
+            border-bottom-color: #121518; }
       body .panel.night-sky footer {
         flex-grow: 1;
         width: 100%;

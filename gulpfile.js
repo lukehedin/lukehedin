@@ -25,7 +25,8 @@ gulp.task('sass', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src('scripts/*.js')
+    return gulp
+        .src('scripts/*.js')
         .pipe(concat('all.js'))
         .pipe(gulp.dest('build'))
         .pipe(rename('all.min.js'))
