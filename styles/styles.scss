@@ -3,12 +3,22 @@
 
 body {
     margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #fff;
 
     h1, h2, h3, h4, h5, h6 {
         font-weight: 100;
         margin: rem-calc(8 0);
+        font-family: 'Amatic SC', cursive;
+        letter-spacing: rem-calc(10);
+    }
+    
+    h1 {
+        font-size: rem-calc(64);
+    }
+
+    h2 {
+        font-size: rem-calc(32);
     }
 
     .panel {
@@ -21,7 +31,7 @@ body {
         flex-direction: column;
         background-color: $dark-ground;
 
-        @import 'night-sky';
+        @import 'night-panel';
     }
 
     .triangle {

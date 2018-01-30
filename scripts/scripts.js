@@ -3,7 +3,7 @@
 var LukeHedin = {
     //returns a random number between min and max
     getRandom: function(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
+        return Math.floor(Math.random() * (max - min + 1) + min);
     },
 
     getMaxWidthOrHeight: function(){
@@ -12,8 +12,6 @@ var LukeHedin = {
 
     //baseSide: 'top' 'bottom' 'left' 'right' or null
     scaleTriangle: function(elSelector, division, baseSide, pointDivision) {
-        var LukeHedin = this;
-
         var scaleAmount = LukeHedin.getMaxWidthOrHeight();
         var triangleEl = $(elSelector);
         
@@ -26,8 +24,6 @@ var LukeHedin = {
     },
     
     scaleRect: function(elSelector, division) {
-        var LukeHedin = this;
-
         var scaleAmount = LukeHedin.getMaxWidthOrHeight();
         var rectEl = $(elSelector);
         
@@ -35,8 +31,6 @@ var LukeHedin = {
     },
 
     scaleSquare: function(elSelector, division){
-        var LukeHedin = this;
-
         var scaleAmount = LukeHedin.getMaxWidthOrHeight();
         var rectEl = $(elSelector);
         
@@ -46,9 +40,9 @@ var LukeHedin = {
 };
 
 $(document).on('ready', function(e){
-    NightSky.draw();
+    NightPanel.draw();
     
     $(window).on('resize', function(e){
-        NightSky.refresh();
+        NightPanel.refresh();
     });
 });

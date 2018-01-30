@@ -1,4 +1,15 @@
 //LH: Holds common SCSS variables
+
 $font-size-root: 16px;
 
+//Colours (or colors)
 $dark-ground: #0e0f12;
+
+//Device media queries - mobile first design
+
+$portrait-phone: "only screen and (max-width : 320px)";
+$landscape-phone: "only screen and (max-width : 320px)";
+
+@media #{$landscape-phone} {
+  background: red;
+}

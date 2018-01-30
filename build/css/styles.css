@@ -1,11 +1,20 @@
 /* rem-calc function for easy pixel to rem conversion*/
+@media only screen and (max-width: 320px) {
+  background: red; }
+
 body {
   margin: 0;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #fff; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-weight: 100;
-    margin: 0.5rem 0rem; }
+    margin: 0.5rem 0rem;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 0.625rem; }
+  body h1 {
+    font-size: 4rem; }
+  body h2 {
+    font-size: 2rem; }
   body .panel {
     height: 100vh;
     min-height: 18.75rem;
@@ -14,92 +23,107 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #0e0f12; }
-    body .panel.night-sky {
+    body .panel.night {
       flex-direction: column;
       background: linear-gradient(#2d313c, #354444); }
-      body .panel.night-sky .star-container {
+      body .panel.night .star-container {
         position: absolute;
         width: 100%;
         height: 100%; }
-      body .panel.night-sky header {
-        flex-grow: 1;
-        padding: 0 20%; }
-      body .panel.night-sky .content {
+      body .panel.night header {
+        flex-grow: 2;
+        padding: 0 20%;
+        position: relative; }
+        body .panel.night header .headings {
+          position: absolute;
+          bottom: 0; }
+          body .panel.night header .headings h2 {
+            padding-left: 1.25rem; }
+      body .panel.night .content {
         flex-grow: 8;
         width: 100%;
         position: relative;
         overflow: hidden; }
-        body .panel.night-sky .content .mountain {
+        body .panel.night .content .mountain {
           position: absolute;
           bottom: 0;
           border-top: none; }
-        body .panel.night-sky .content .mountain-a {
-          left: -6%;
-          border-bottom-color: #2d3538; }
-        body .panel.night-sky .content .mountain-b {
+        body .panel.night .content .mountain-a {
           right: 16%;
           border-bottom-color: #282f32; }
-        body .panel.night-sky .content .mountain-c {
+        body .panel.night .content .mountain-b {
           right: -16%;
           border-bottom-color: #262c2e; }
-        body .panel.night-sky .content .treeline {
+        body .panel.night .content .treeline {
           position: absolute;
           bottom: 0;
           display: flex;
           width: 100%;
           height: 10%; }
-          body .panel.night-sky .content .treeline .tree {
+          body .panel.night .content .treeline .tree {
             bottom: 0;
             border-top: none; }
-          body .panel.night-sky .content .treeline.treeline-a .tree {
+          body .panel.night .content .treeline.treeline-a .tree {
             border-bottom-color: #181b1f; }
-          body .panel.night-sky .content .treeline.treeline-b .tree {
+          body .panel.night .content .treeline.treeline-b .tree {
             border-bottom-color: #121518; }
-        body .panel.night-sky .content .pinetree {
+        body .panel.night .content .pinetree {
           bottom: 0;
           position: absolute;
           border-bottom-color: #0e0f12; }
-          body .panel.night-sky .content .pinetree.pinetree-a {
+          body .panel.night .content .pinetree.pinetree-a {
             left: -2%; }
-          body .panel.night-sky .content .pinetree.pinetree-b {
+          body .panel.night .content .pinetree.pinetree-b {
             left: 4%; }
-          body .panel.night-sky .content .pinetree.pinetree-c {
+          body .panel.night .content .pinetree.pinetree-c {
             left: 12%; }
-          body .panel.night-sky .content .pinetree.pinetree-d {
+          body .panel.night .content .pinetree.pinetree-d {
             right: -1%; }
-          body .panel.night-sky .content .pinetree.pinetree-e {
+          body .panel.night .content .pinetree.pinetree-e {
             right: 6%; }
-        body .panel.night-sky .content .fireplace {
+        body .panel.night .content .fireplace {
           position: absolute;
           bottom: 0;
-          right: 10%; }
-          body .panel.night-sky .content .fireplace .fireglow {
+          right: 20%;
+          text-align: center; }
+          body .panel.night .content .fireplace .fire {
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            height: 10%; }
+            body .panel.night .content .fireplace .fire .flame {
+              border-bottom-color: #d38c1d;
+              position: absolute;
+              bottom: 0;
+              border-width: 0.25rem; }
+          body .panel.night .content .fireplace .fireglow {
             width: 100%;
             height: 100%;
-            background-image: radial-gradient(circle at bottom, rgba(230, 222, 72, 0.2) 5%, rgba(230, 222, 72, 0.1) 20%, rgba(230, 222, 72, 0.05) 25%, transparent 45%); }
-      body .panel.night-sky footer {
+            opacity: 0.5;
+            background-image: radial-gradient(circle at bottom, rgba(230, 222, 72, 0.2) 5%, transparent 45%); }
+      body .panel.night footer {
         flex-grow: 1;
         text-align: center;
         width: 100%;
         background-color: #0e0f12; }
-        body .panel.night-sky footer .arrow-down {
+        body .panel.night footer .arrow-down {
           display: inline-block;
           width: 0;
           height: 0;
           border-left: 1.25rem solid transparent;
           border-right: 1.25rem solid transparent;
           border-top: 1.125rem solid #fff; }
-      body .panel.night-sky .star {
+      body .panel.night .star {
         position: absolute; }
-        body .panel.night-sky .star .triangle {
+        body .panel.night .star .triangle {
           border-width: 0.1875rem;
           opacity: 0.5; }
-        body .panel.night-sky .star .twinkle-a {
+        body .panel.night .star .twinkle-a {
           bottom: 0;
           border-bottom-color: #ffffff;
           border-top: none;
           position: absolute; }
-        body .panel.night-sky .star .twinkle-b {
+        body .panel.night .star .twinkle-b {
           bottom: 0;
           border-top-color: #ffffff;
           border-bottom: none;
