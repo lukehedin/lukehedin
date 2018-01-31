@@ -1,8 +1,32 @@
 &.technical {
     background-color: $light-grey;
-    height: rem-calc(600);
 
     header {
         color: $flame-orange;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        color: $dark-grey;
+
+        .paragraph {
+            width: 100%;
+            flex: 1;
+            padding: rem-calc(80 0);
+            text-align: center;
+
+            svg {
+                display: block;
+                height: rem-calc(128);
+                width: 100%;
+                padding: rem-calc(40 0);
+
+                path {
+                    stroke: $flame-orange;
+                }
+            }
+        }
     }
 }

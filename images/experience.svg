@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   viewBox="0 0 64 64">
+  <defs
+     id="defs10" />
+  <path
+     id="rect4253-6-2"
+     d="m 4.3930315,32.138134 9.3138445,-4.807787 17.313845,9.192213 17.313845,-9.192213 9.313845,4.807787 -26.62768,13.615572 z"
+     style="opacity:1;fill:none;fill-opacity:1;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     id="rect4253-6-2-1"
+     d="M 4.3930315,16.138134 31.020721,2.5225595 57.648411,16.138134 31.020731,29.753706 Z"
+     style="opacity:1;fill:none;fill-opacity:1;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     id="rect4253-6-2-6"
+     d="M 4.3765546,48.138135 13.6904,43.330348 31.004245,52.52256 48.31809,43.330348 l 9.313845,4.807787 -26.62768,13.615571 z"
+     style="opacity:1;fill:none;fill-opacity:1;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+</svg>

@@ -1,4 +1,6 @@
 &.night {
+    padding: 0;
+    height: 100vh;
     min-height: rem-calc(300);
     flex-direction: column;
     background: linear-gradient(#2d313c, #354444);
@@ -10,17 +12,17 @@
     }
 
     header {
-        flex-grow: 2;
+        flex-grow: 4; //old 2
         position: relative;
-        padding: 0;
 
         .headings {
             position: absolute;
             bottom: 0;
             cursor: default;
+            width: 100%; //old na
 
-            h2 {
-                padding-left: rem-calc(20);
+            h1, h2 {
+                text-align: center; //old na
             }
         }
     }

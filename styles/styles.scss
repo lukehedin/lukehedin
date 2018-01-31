@@ -19,26 +19,29 @@ body {
     }
     
     h1 {
-        font-size: rem-calc(64);
+        font-size: rem-calc(128); //old 64
     }
 
     h2 {
-        font-size: rem-calc(32);
+        font-size: rem-calc(72);
     }
 
     .panel {
-        height: 100vh;
         width: 100%;
         
         display: flex;
         flex-direction: column;
         background-color: $dark-ground;
+        padding: rem-calc(80 0);
 
         header {
             text-align:center;
             width: 100%;
-            font-size: rem-calc(32);
-            padding: rem-calc(40 0);
+            font-size: rem-calc(72);
+        }
+        
+        .paragraph {
+            font-size: rem-calc(42);
         }
 
         //Panel overrides here
@@ -50,6 +53,7 @@ body {
     }
 
     .confined {
+        width: 80vw;
         max-width: rem-calc(1024);
         margin: 0 auto;
     }

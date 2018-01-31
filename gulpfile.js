@@ -7,13 +7,25 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-
+var fileinclude = require('gulp-file-include'),
+  gulp = require('gulp');
+ 
 // Lint Task
 gulp.task('lint', function() {
     return gulp.src('scripts/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
+
+//File include (for @@includes)
+gulp.task('fileinclude', function() {
+    gulp.src(['html/*.html'])
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest('./'));
+  });
 
 // Compile Our Sass
 //LH: We only compile the top level styles.scss file, it imports the rest
@@ -39,7 +51,9 @@ gulp.task('scripts', function() {
 gulp.task('watch', function() {
     gulp.watch('scripts/*.js', ['lint', 'scripts']);
     gulp.watch('styles/*.scss', ['sass']);
+    gulp.watch('html/*.html', ['fileinclude']);
+    gulp.watch('images/*.svg', ['fileinclude'])
 });
 
 // Default Task
-gulp.task('default', ['lint', 'sass', 'scripts', 'watch']);
+gulp.task('default', ['lint', 'sass', 'scripts', 'watch', 'fileinclude']);
