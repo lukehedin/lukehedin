@@ -10,7 +10,6 @@
 
     header {
         flex-grow: 2;
-        padding: 0 20%;
         position: relative;
 
         .headings {
@@ -111,7 +110,7 @@
                 height: 10%;
 
                 .flame {
-                    border-bottom-color: #d38c1d;
+                    border-bottom-color: $flame-orange;
                     position: absolute;
                     bottom: 0;
                     border-width: rem-calc(4);
@@ -141,12 +140,14 @@
         background-color: $dark-ground;
 
         .arrow-down {
+            position: absolute;
+            bottom: rem-calc(10);
             display: inline-block;
             width: 0; 
             height: 0; 
-            border-left: rem-calc(20) solid transparent;
-            border-right: rem-calc(20) solid transparent;
-            border-top: rem-calc(18) solid #fff;
+            border-left: rem-calc(10) solid transparent;
+            border-right: rem-calc(10) solid transparent;
+            border-top: rem-calc(8) solid $light-grey;
         }
     }
 
@@ -160,14 +161,14 @@
 
         .twinkle-a {
             bottom: 0;
-            border-bottom-color: #ffffff;
+            border-bottom-color: $light-grey;
             border-top: none;
             position: absolute;
         }
 
         .twinkle-b {
             bottom: 0;
-            border-top-color: #ffffff;
+            border-top-color: $light-grey;
             border-bottom: none;
             position: absolute;
         }

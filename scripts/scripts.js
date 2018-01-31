@@ -15,11 +15,15 @@ var LukeHedin = {
         var scaleAmount = LukeHedin.getMaxWidthOrHeight();
         var triangleEl = $(elSelector);
         
-        triangleEl.css('border-width', (scaleAmount / division) + 'px');
+        var scaledVal = (scaleAmount / division);
+
+        triangleEl.css('border-width', `${scaledVal}px`);
     
+        var pointScaledVal = (scaleAmount / pointDivision);
+
         //extends the point of the triangle to a different amount if provided
         if(pointDivision) {
-            triangleEl.css('border-' + baseSide + '-width', (scaleAmount / pointDivision) + 'px');
+            triangleEl.css(`border-${baseSide}-width`, `${pointScaledVal}px`);
         }
     },
     
@@ -27,15 +31,19 @@ var LukeHedin = {
         var scaleAmount = LukeHedin.getMaxWidthOrHeight();
         var rectEl = $(elSelector);
         
-        rectEl.css('height', (scaleAmount / division) + 'px');
+        var scaledVal = (scaleAmount / division);
+        
+        rectEl.css('height', `${scaledVal}px`);
     },
 
     scaleSquare: function(elSelector, division){
         var scaleAmount = LukeHedin.getMaxWidthOrHeight();
         var rectEl = $(elSelector);
         
-        rectEl.css('height', (scaleAmount / division) + 'px');
-        rectEl.css('width', (scaleAmount / division) + 'px');
+        var scaledVal = (scaleAmount / division);
+
+        rectEl.css('height', `${scaledVal}px`);
+        rectEl.css('width', `${scaledVal}px`);
     }
 };
 
@@ -43,6 +51,10 @@ $(document).on('ready', function(e){
     NightPanel.draw();
     
     $(window).on('resize', function(e){
+        NightPanel.refresh();
+    });
+
+    $(window).on('scroll', function(e){
         NightPanel.refresh();
     });
 });

@@ -55,7 +55,7 @@ var NightPanel = {
 
         for(var i = 0; i < amount; i++){
             var randPadding = Math.floor(Math.random() * 60) + 1;
-            trees += `<div class="triangle tree" style="padding-top:` + randPadding + `px"></div>`;
+            trees += `<div class="triangle tree" style="padding-top: ${randPadding}px"></div>`;
         }
 
         container.append(trees);
@@ -68,10 +68,10 @@ var NightPanel = {
         for(var i = 0; i < amount; i++){
             var randX = LukeHedin.getRandom(1, 100);
             var randY = LukeHedin.getRandom(1, 80);
-            stars += `<div class="star" style="left:` + randX + `%;top:` + randY + `%;">` +
-                `<div class="triangle twinkle-a"></div>` +
-                `<div class="triangle twinkle-b"></div>` +
-            `</div>`;
+            stars += `<div class="star" style="left: ${randX}%;top: ${randY}%;">
+                <div class="triangle twinkle-a"></div>
+                <div class="triangle twinkle-b"></div>
+            </div>`;
         }
 
         nightPanel.prepend(stars);
@@ -91,8 +91,8 @@ var NightPanel = {
         stars = stars.filter(function(){ return LukeHedin.getRandom(1, 4) === 1; });
 
         stars.each(function(idx, star){
-            $(star).children().first().css('opacity', '0.' + LukeHedin.getRandom(3, 6));
-            $(star).children().last().css('opacity', '0.' + LukeHedin.getRandom(3, 6));
+            $(star).children().first().css('opacity', `0.${LukeHedin.getRandom(3, 6)}`);
+            $(star).children().last().css('opacity', `0.${LukeHedin.getRandom(3, 6)}`);
         });
 
         window.setTimeout(NightPanel.sparkleStars, LukeHedin.getRandom(100,200));
@@ -105,9 +105,9 @@ var NightPanel = {
         var newOpacity;
         
         if(currentOpacity <= 0.55){
-            newOpacity = '0.' + LukeHedin.getRandom(56, 62);
+            newOpacity = `0.${LukeHedin.getRandom(56, 62)}`;
         } else {
-            newOpacity = '0.' + LukeHedin.getRandom(48, 54);
+            newOpacity = `0.${LukeHedin.getRandom(48, 54)}`;
         }
 
         fireglow.fadeTo(LukeHedin.getRandom(100, 300), newOpacity, function(){
@@ -120,7 +120,7 @@ var NightPanel = {
 
         var offset = LukeHedin.getRandom(-8, 8);
 
-        var flame = $(`<div class="triangle flame" style="left:` + offset + `px;"></div>`);
+        var flame = $(`<div class="triangle flame" style="left: ${offset}px;"></div>`);
         fire.append(flame);
         flame.animate({
             bottom: '100%',
@@ -149,11 +149,15 @@ var LukeHedin = {
         var scaleAmount = LukeHedin.getMaxWidthOrHeight();
         var triangleEl = $(elSelector);
         
-        triangleEl.css('border-width', (scaleAmount / division) + 'px');
+        var scaledVal = (scaleAmount / division);
+
+        triangleEl.css('border-width', `${scaledVal}px`);
     
+        var pointScaledVal = (scaleAmount / pointDivision);
+
         //extends the point of the triangle to a different amount if provided
         if(pointDivision) {
-            triangleEl.css('border-' + baseSide + '-width', (scaleAmount / pointDivision) + 'px');
+            triangleEl.css(`border-${baseSide}-width`, `${pointScaledVal}px`);
         }
     },
     
@@ -161,15 +165,19 @@ var LukeHedin = {
         var scaleAmount = LukeHedin.getMaxWidthOrHeight();
         var rectEl = $(elSelector);
         
-        rectEl.css('height', (scaleAmount / division) + 'px');
+        var scaledVal = (scaleAmount / division);
+        
+        rectEl.css('height', `${scaledVal}px`);
     },
 
     scaleSquare: function(elSelector, division){
         var scaleAmount = LukeHedin.getMaxWidthOrHeight();
         var rectEl = $(elSelector);
         
-        rectEl.css('height', (scaleAmount / division) + 'px');
-        rectEl.css('width', (scaleAmount / division) + 'px');
+        var scaledVal = (scaleAmount / division);
+
+        rectEl.css('height', `${scaledVal}px`);
+        rectEl.css('width', `${scaledVal}px`);
     }
 };
 
@@ -177,6 +185,10 @@ $(document).on('ready', function(e){
     NightPanel.draw();
     
     $(window).on('resize', function(e){
+        NightPanel.refresh();
+    });
+
+    $(window).on('scroll', function(e){
         NightPanel.refresh();
     });
 });

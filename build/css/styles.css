@@ -1,16 +1,19 @@
 /* rem-calc function for easy pixel to rem conversion*/
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro|Amatic+SC|Montserrat");
 @media only screen and (max-width: 320px) {
   background: red; }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  color: #fff; }
+  font-family: 'Montserrat', sans-serif;
+  color: #fbfbfc; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
+    text-align: left;
     font-weight: 100;
     margin: 0.5rem 0rem;
-    font-family: 'Amatic SC', cursive;
-    letter-spacing: 0.625rem; }
+    font-family: 'Amatic SC', sans-serif;
+    letter-spacing: 0.625rem;
+    color: #fbfbfc; }
   body h1 {
     font-size: 4rem; }
   body h2 {
@@ -19,10 +22,13 @@ body {
     height: 100vh;
     min-height: 18.75rem;
     width: 100%;
-    min-width: 18.75rem;
     display: flex;
     flex-direction: column;
     background-color: #0e0f12; }
+    body .panel header {
+      text-align: center;
+      width: 100%;
+      font-size: 2.5rem; }
     body .panel.night {
       flex-direction: column;
       background: linear-gradient(#2d313c, #354444); }
@@ -32,7 +38,6 @@ body {
         height: 100%; }
       body .panel.night header {
         flex-grow: 2;
-        padding: 0 20%;
         position: relative; }
         body .panel.night header .headings {
           position: absolute;
@@ -107,12 +112,14 @@ body {
         width: 100%;
         background-color: #0e0f12; }
         body .panel.night footer .arrow-down {
+          position: absolute;
+          bottom: 0.625rem;
           display: inline-block;
           width: 0;
           height: 0;
-          border-left: 1.25rem solid transparent;
-          border-right: 1.25rem solid transparent;
-          border-top: 1.125rem solid #fff; }
+          border-left: 0.625rem solid transparent;
+          border-right: 0.625rem solid transparent;
+          border-top: 0.5rem solid #fbfbfc; }
       body .panel.night .star {
         position: absolute; }
         body .panel.night .star .triangle {
@@ -120,14 +127,32 @@ body {
           opacity: 0.5; }
         body .panel.night .star .twinkle-a {
           bottom: 0;
-          border-bottom-color: #ffffff;
+          border-bottom-color: #fbfbfc;
           border-top: none;
           position: absolute; }
         body .panel.night .star .twinkle-b {
           bottom: 0;
-          border-top-color: #ffffff;
+          border-top-color: #fbfbfc;
           border-bottom: none;
           position: absolute; }
+    body .panel.experience {
+      background-color: #fbfbfc;
+      height: 37.5rem; }
+      body .panel.experience header {
+        color: #d38c1d; }
+    body .panel.technical {
+      background-color: #edeef1;
+      height: 37.5rem; }
+      body .panel.technical header {
+        color: #494c54; }
+    body .panel.about {
+      background-color: #fbfbfc;
+      height: 37.5rem; }
+      body .panel.about header {
+        color: #494c54; }
+  body .confined {
+    max-width: 64rem;
+    margin: 0 auto; }
   body .triangle {
     width: 0;
     height: 0;

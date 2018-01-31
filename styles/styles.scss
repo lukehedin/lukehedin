@@ -1,16 +1,21 @@
 @import 'functions';
 @import 'variables';
 
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Amatic+SC|Montserrat');
+
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    color: $light-grey;
 
     h1, h2, h3, h4, h5, h6 {
+        text-align:left;
         font-weight: 100;
         margin: rem-calc(8 0);
-        font-family: 'Amatic SC', cursive;
+        font-family: 'Amatic SC', sans-serif;
         letter-spacing: rem-calc(10);
+        color: $light-grey;
     }
     
     h1 {
@@ -25,13 +30,28 @@ body {
         height: 100vh;
         min-height: rem-calc(300);
         width: 100%;
-        min-width: rem-calc(300);
         
         display: flex;
         flex-direction: column;
         background-color: $dark-ground;
 
-        @import 'night-panel';
+        header {
+            text-align:center;
+            width: 100%;
+            font-size: rem-calc(40);
+        }
+
+        //Panel overrides here
+        @import 'panel-night';
+        @import 'panel-experience';
+        @import 'panel-technical';
+        @import 'panel-about';
+        @import 'panel-contact';
+    }
+
+    .confined {
+        max-width: rem-calc(1024);
+        margin: 0 auto;
     }
 
     .triangle {
