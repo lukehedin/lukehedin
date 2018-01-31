@@ -49,7 +49,8 @@ var LukeHedin = {
 
 $(document).on('ready', function(e){
     NightPanel.draw();
-    
+    NightPanel.bindEvents();
+
     $(window).on('resize', function(e){
         NightPanel.refresh();
     });

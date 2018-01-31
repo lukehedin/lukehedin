@@ -20,7 +20,6 @@ body {
     font-size: 2rem; }
   body .panel {
     height: 100vh;
-    min-height: 18.75rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,8 +27,10 @@ body {
     body .panel header {
       text-align: center;
       width: 100%;
-      font-size: 2.5rem; }
+      font-size: 2rem;
+      padding: 2.5rem 0rem; }
     body .panel.night {
+      min-height: 18.75rem;
       flex-direction: column;
       background: linear-gradient(#2d313c, #354444); }
       body .panel.night .star-container {
@@ -38,10 +39,12 @@ body {
         height: 100%; }
       body .panel.night header {
         flex-grow: 2;
-        position: relative; }
+        position: relative;
+        padding: 0; }
         body .panel.night header .headings {
           position: absolute;
-          bottom: 0; }
+          bottom: 0;
+          cursor: default; }
           body .panel.night header .headings h2 {
             padding-left: 1.25rem; }
       body .panel.night .content {
@@ -110,7 +113,8 @@ body {
         flex-grow: 1;
         text-align: center;
         width: 100%;
-        background-color: #0e0f12; }
+        background-color: #0e0f12;
+        position: relative; }
         body .panel.night footer .arrow-down {
           position: absolute;
           bottom: 0.625rem;
@@ -141,15 +145,20 @@ body {
       body .panel.experience header {
         color: #d38c1d; }
     body .panel.technical {
-      background-color: #edeef1;
-      height: 37.5rem; }
-      body .panel.technical header {
-        color: #494c54; }
-    body .panel.about {
       background-color: #fbfbfc;
       height: 37.5rem; }
+      body .panel.technical header {
+        color: #d38c1d; }
+    body .panel.about {
+      background-color: #9ab2b9;
+      height: 37.5rem; }
       body .panel.about header {
-        color: #494c54; }
+        color: #fbfbfc; }
+    body .panel.contact {
+      background-color: #4a626a;
+      height: 3.75rem; }
+      body .panel.contact header {
+        color: #fbfbfc; }
   body .confined {
     max-width: 64rem;
     margin: 0 auto; }

@@ -12,7 +12,7 @@ var NightPanel = {
         NightPanel.fillTreelines('.treeline-b', 50);
 
         //Add stars to the sky
-        NightPanel.addStars(100);
+        NightPanel.addStars(60);
 
         NightPanel.beginAnimating();
 
@@ -67,14 +67,18 @@ var NightPanel = {
 
         for(var i = 0; i < amount; i++){
             var randX = LukeHedin.getRandom(1, 100);
-            var randY = LukeHedin.getRandom(1, 80);
-            stars += `<div class="star" style="left: ${randX}%;top: ${randY}%;">
-                <div class="triangle twinkle-a"></div>
-                <div class="triangle twinkle-b"></div>
-            </div>`;
+            var randY = LukeHedin.getRandom(1, 100);
+            stars += NightPanel.getStarHtml(randX, randY);
         }
 
-        nightPanel.prepend(stars);
+        nightPanel.append(stars);
+    },
+
+    getStarHtml: function(percentX, perecentY){
+        return `<div class="star" style="left: ${percentX}%;top: ${perecentY}%;">
+            <div class="triangle twinkle-a"></div>
+            <div class="triangle twinkle-b"></div>
+        </div>`;
     },
 
     beginAnimating: function() {
@@ -130,5 +134,15 @@ var NightPanel = {
         });
 
         window.setTimeout(NightPanel.fireFlames, LukeHedin.getRandom(20, 60));
-    }
+    },
+
+    //Called on document ready
+    bindEvents: function(){
+        $('.panel.night').on('click', function(e) {
+            var x = (e.clientX + window.scrollX) / $('.star-container').width() * 100;
+            var y = (e.clientY + window.scrollY) / $('.star-container').height() * 100;
+
+            $('.star-container').append(NightPanel.getStarHtml(x, y));
+        });
+    },
 };

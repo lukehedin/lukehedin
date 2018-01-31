@@ -1,4 +1,5 @@
 &.night {
+    min-height: rem-calc(300);
     flex-direction: column;
     background: linear-gradient(#2d313c, #354444);
 
@@ -11,10 +12,12 @@
     header {
         flex-grow: 2;
         position: relative;
+        padding: 0;
 
         .headings {
             position: absolute;
             bottom: 0;
+            cursor: default;
 
             h2 {
                 padding-left: rem-calc(20);
@@ -138,6 +141,7 @@
         text-align: center;
         width: 100%;
         background-color: $dark-ground;
+        position: relative;
 
         .arrow-down {
             position: absolute;
