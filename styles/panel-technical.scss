@@ -1,21 +1,30 @@
 &.technical {
-    background-color: $light-grey;
+    background-color: $dark-blue;
 
     header {
-        color: $flame-orange;
+        color: $light-grey;
     }
 
     .content {
         display: flex;
         flex-direction: column;
 
-        color: $dark-grey;
+        color: $light-grey;
 
         .paragraph {
             width: 100%;
             flex: 1;
-            padding: rem-calc(80 0);
             text-align: center;
+            padding: rem-calc(80 0);
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+
+                li {
+                    padding: rem-calc(0 0 20 0);
+                }
+            }
 
             svg {
                 display: block;
@@ -24,7 +33,27 @@
                 padding: rem-calc(40 0);
 
                 path {
-                    stroke: $flame-orange;
+                    fill: $light-grey;
+                }
+            }
+
+            &.front-end {
+                svg {
+                    path {
+                        &:first-of-type{
+                            fill: $flame-orange;
+                        }
+                    }
+                }
+            }
+
+            &.back-end {
+                svg {
+                    path {
+                        &:last-of-type{
+                            fill: $flame-orange;
+                        }
+                    }
                 }
             }
         }

@@ -12,7 +12,7 @@ var NightPanel = {
         NightPanel.fillTreelines('.treeline-b', 50);
 
         //Add stars to the sky
-        NightPanel.addStars(60);
+        NightPanel.addStars(100);
 
         NightPanel.beginAnimating();
 

@@ -1,35 +1,42 @@
 /* rem-calc function for easy pixel to rem conversion*/
-@import url("https://fonts.googleapis.com/css?family=Maven+Pro|Amatic+SC|Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro|Montserrat");
 @media only screen and (max-width: 320px) {
   background: red; }
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   color: #fbfbfc; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     text-align: left;
     font-weight: 100;
     margin: 0.5rem 0rem;
-    font-family: 'Amatic SC', sans-serif;
-    letter-spacing: 0.625rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
     color: #fbfbfc; }
   body h1 {
-    font-size: 8rem; }
+    font-size: 7.25rem; }
   body h2 {
-    font-size: 4.5rem; }
+    font-size: 2.625rem; }
+  body a {
+    text-decoration: none;
+    color: inherit; }
   body .panel {
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #0e0f12;
-    padding: 5rem 0rem; }
+    padding: 10rem 0rem; }
     body .panel header {
+      font-family: 'Montserrat', sans-serif;
       text-align: center;
       width: 100%;
-      font-size: 4.5rem; }
-    body .panel .paragraph {
-      font-size: 2.625rem; }
+      font-size: 4.875rem;
+      padding: 1.25rem 0rem; }
+    body .panel .content .paragraph {
+      font-size: 2.625rem;
+      padding: 5rem 0rem; }
     body .panel.night {
       padding: 0;
       height: 100vh;
@@ -42,7 +49,8 @@ body {
         height: 100%; }
       body .panel.night header {
         flex-grow: 4;
-        position: relative; }
+        position: relative;
+        user-select: none; }
         body .panel.night header .headings {
           position: absolute;
           bottom: 0;
@@ -153,45 +161,92 @@ body {
         body .panel.experience .content .paragraph {
           width: 100%;
           flex: 1;
-          padding: 5rem 0rem;
-          text-align: center; }
+          text-align: center;
+          padding: 5rem 0rem; }
           body .panel.experience .content .paragraph svg {
             display: block;
             height: 8rem;
             width: 100%;
             padding: 2.5rem 0rem; }
             body .panel.experience .content .paragraph svg path {
+              fill: none;
               stroke: #d38c1d; }
     body .panel.technical {
-      background-color: #fbfbfc; }
+      background-color: #527b8a; }
       body .panel.technical header {
-        color: #d38c1d; }
+        color: #fbfbfc; }
       body .panel.technical .content {
         display: flex;
         flex-direction: column;
-        color: #9a9ea6; }
+        color: #fbfbfc; }
         body .panel.technical .content .paragraph {
           width: 100%;
           flex: 1;
-          padding: 5rem 0rem;
-          text-align: center; }
+          text-align: center;
+          padding: 5rem 0rem; }
+          body .panel.technical .content .paragraph ul {
+            list-style-type: none;
+            margin: 0; }
+            body .panel.technical .content .paragraph ul li {
+              padding: 0rem 0rem 1.25rem 0rem; }
           body .panel.technical .content .paragraph svg {
             display: block;
             height: 8rem;
             width: 100%;
             padding: 2.5rem 0rem; }
             body .panel.technical .content .paragraph svg path {
-              stroke: #d38c1d; }
+              fill: #fbfbfc; }
+          body .panel.technical .content .paragraph.front-end svg path:first-of-type {
+            fill: #d38c1d; }
+          body .panel.technical .content .paragraph.back-end svg path:last-of-type {
+            fill: #d38c1d; }
     body .panel.about {
-      background-color: #9ab2b9;
-      height: 37.5rem; }
+      background-color: #fbfbfc; }
       body .panel.about header {
-        color: #fbfbfc; }
-    body .panel.contact {
-      background-color: #4a626a;
-      height: 3.75rem; }
-      body .panel.contact header {
-        color: #fbfbfc; }
+        color: #d38c1d; }
+      body .panel.about .content {
+        display: flex;
+        flex-direction: column; }
+        body .panel.about .content .paragraph {
+          color: #9a9ea6;
+          padding: 1.25rem 0rem;
+          text-align: center; }
+          body .panel.about .content .paragraph.projects a {
+            display: block;
+            border: 0.25rem solid;
+            overflow: hidden;
+            border-radius: 4rem;
+            margin: 3.75rem 0rem;
+            width: 100%; }
+            body .panel.about .content .paragraph.projects a > div {
+              display: inline-block;
+              width: 32.5rem; }
+            body .panel.about .content .paragraph.projects a svg {
+              display: inline-block;
+              height: 8rem;
+              width: 8rem;
+              vertical-align: middle; }
+            body .panel.about .content .paragraph.projects a.bb-link {
+              border-color: #ff6699;
+              color: #ff6699; }
+            body .panel.about .content .paragraph.projects a:last-of-type {
+              color: #d38c1d; }
+              body .panel.about .content .paragraph.projects a:last-of-type svg {
+                height: 5.75rem;
+                width: 5.75rem; }
+                body .panel.about .content .paragraph.projects a:last-of-type svg path {
+                  fill: #d38c1d; }
+          body .panel.about .content .paragraph.socials svg {
+            display: inline-block;
+            width: 8rem;
+            height: 8rem;
+            margin: 2.5rem; }
+            body .panel.about .content .paragraph.socials svg path {
+              fill: #d38c1d; }
+    body .panel.footer {
+      background-color: #cecece; }
+      body .panel.footer .paragraph {
+        text-align: center; }
   body .confined {
     width: 80vw;
     max-width: 64rem;

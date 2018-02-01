@@ -2,28 +2,34 @@
 @import 'variables';
 
 //Fonts
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Amatic+SC|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Montserrat');
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
     color: $light-grey;
 
     h1, h2, h3, h4, h5, h6 {
         text-align:left;
         font-weight: 100;
         margin: rem-calc(8 0);
-        font-family: 'Amatic SC', sans-serif;
-        letter-spacing: rem-calc(10);
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: rem-calc(4);
+        text-transform: uppercase;
         color: $light-grey;
     }
     
     h1 {
-        font-size: rem-calc(128); //old 64
+        font-size: rem-calc(116); //old 64
     }
 
     h2 {
-        font-size: rem-calc(72);
+        font-size: rem-calc(42);
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 
     .panel {
@@ -32,16 +38,21 @@ body {
         display: flex;
         flex-direction: column;
         background-color: $dark-ground;
-        padding: rem-calc(80 0);
+        padding: rem-calc(160 0);
 
         header {
+            font-family: 'Montserrat', sans-serif;
             text-align:center;
             width: 100%;
-            font-size: rem-calc(72);
+            font-size: rem-calc(78);
+            padding: rem-calc(20 0);
         }
         
-        .paragraph {
-            font-size: rem-calc(42);
+        .content{
+            .paragraph {
+                font-size: rem-calc(42);
+                padding: rem-calc(80 0);
+            }
         }
 
         //Panel overrides here
@@ -49,7 +60,7 @@ body {
         @import 'panel-experience';
         @import 'panel-technical';
         @import 'panel-about';
-        @import 'panel-contact';
+        @import 'panel-footer';
     }
 
     .confined {

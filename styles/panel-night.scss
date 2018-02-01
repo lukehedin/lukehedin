@@ -14,6 +14,7 @@
     header {
         flex-grow: 4; //old 2
         position: relative;
+        user-select: none;
 
         .headings {
             position: absolute;
