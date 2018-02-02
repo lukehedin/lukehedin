@@ -61,6 +61,8 @@ body {
         position: absolute;
         width: 100%;
         height: 100%; }
+        body .panel.night .star-container .star {
+          -webkit-transform: translateZ(0); }
       body .panel.night header {
         position: absolute;
         user-select: none;
@@ -126,11 +128,13 @@ body {
             bottom: 0;
             height: 10%; }
             body .panel.night .content .fireplace .fire .flame {
+              -webkit-transform: translateZ(0);
               border-bottom-color: #d38c1d;
               position: absolute;
               bottom: 0;
               border-width: 0.25rem; }
           body .panel.night .content .fireplace .fireglow {
+            -webkit-transform: translateZ(0);
             width: 100%;
             height: 100%;
             opacity: 0.5;

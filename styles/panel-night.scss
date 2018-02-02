@@ -10,6 +10,10 @@
         position: absolute;
         width: 100%;
         height: 100%;
+
+        .star {
+            -webkit-transform: translateZ(0); //For mobile anim speed
+        }
     }
 
     header {
@@ -118,6 +122,8 @@
                 height: 10%;
 
                 .flame {
+                    -webkit-transform: translateZ(0); //For mobile anim speed
+
                     border-bottom-color: $flame-orange;
                     position: absolute;
                     bottom: 0;
@@ -126,6 +132,8 @@
             }
 
             .fireglow {
+                -webkit-transform: translateZ(0); //For mobile anim speed
+
                 width: 100%;
                 height: 100%;
                 opacity: 0.5;

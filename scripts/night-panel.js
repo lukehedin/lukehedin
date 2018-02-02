@@ -12,7 +12,8 @@ var NightPanel = {
         NightPanel.fillTreelines('.treeline-b', 50);
 
         //Add stars to the sky
-        NightPanel.addStars(100);
+        var stars =  $(window).width() / 10;
+        NightPanel.addStars(stars);
 
         NightPanel.beginAnimating();
 
@@ -64,14 +65,29 @@ var NightPanel = {
     addStars: function(amount){
         var nightPanel = $('.star-container');
         var stars = "";
-
         for(var i = 0; i < amount; i++){
             var randX = LukeHedin.getRandom(1, 100);
             var randY = LukeHedin.getRandom(1, 100);
+            
             stars += NightPanel.getStarHtml(randX, randY);
         }
 
         nightPanel.append(stars);
+
+        //Remove any stars colliding with the title
+        var headingRect = $('.panel.night .headings')[0].getBoundingClientRect();
+        var stars = $('.star');
+        
+        stars.each(function(idx, star){
+            var starPos = $(star).position();
+
+            if(starPos.left > headingRect.left 
+                && starPos.left < headingRect.right
+                && starPos.top > headingRect.top
+                && starPos.top < headingRect.bottom) {
+                $(star).remove();
+            }
+        });
     },
 
     getStarHtml: function(percentX, perecentY){

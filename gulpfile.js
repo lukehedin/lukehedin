@@ -39,11 +39,9 @@ gulp.task('sass', function() {
 gulp.task('scripts', function() {
     return gulp
         .src('scripts/*.js')
-        .pipe(concat('all.js'))
         .pipe(gulp.dest('build'))
         .pipe(rename('all.min.js'))
-        //LH: Uncomment this for minification
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('build/js'));
 });
 
