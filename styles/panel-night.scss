@@ -2,6 +2,7 @@
     padding: 0;
     height: 100vh;
     min-height: rem-calc(300);
+    display: flex;
     flex-direction: column;
     background: linear-gradient(#2d313c, #354444);
 
@@ -12,18 +13,19 @@
     }
 
     header {
-        flex-grow: 4; //old 2
-        position: relative;
+        position: absolute;
         user-select: none;
+        padding: 0;
+        bottom: 60%;
 
         .headings {
-            position: absolute;
-            bottom: 0;
+            position: relative;
             cursor: default;
             width: 100%; //old na
 
             h1, h2 {
                 text-align: center; //old na
+                margin: 0;
             }
         }
     }

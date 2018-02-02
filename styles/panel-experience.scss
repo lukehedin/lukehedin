@@ -6,22 +6,27 @@
     }
 
     .content {
-        display: flex;
-        flex-direction: column;
-
         color: $dark-grey;
+
+        @media #{$medium-device} {
+            display: flex;
+            flex-direction: row;
+        }  
 
         .paragraph {
             width: 100%;
-            flex: 1;
             text-align: center;
-            padding: rem-calc(80 0);
 
+            @media #{$medium-device} {
+                flex-grow: 1;
+                margin: rem-calc(0 20);
+            }
+        
             svg {
                 display: block;
-                height: rem-calc(128);
                 width: 100%;
                 padding: rem-calc(40 0);
+                height: rem-calc(64);
 
                 path {
                     fill:none;
