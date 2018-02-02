@@ -244,6 +244,10 @@ body {
               margin: 1.25rem; } }
           body .panel.projects .content .paragraph svg path {
             fill: #d38c1d; }
+          body .panel.projects .content .paragraph svg:hover path {
+            fill: #fbfbfc;
+            stroke: #d38c1d;
+            stroke-width: 0.03125rem; }
       body .panel.projects .content .project-button {
         display: block;
         border: 0.125rem solid;
@@ -253,7 +257,7 @@ body {
         margin-bottom: 2.5rem;
         margin-top: 2.5rem;
         width: 100%;
-        max-width: 25rem; }
+        max-width: 26.25rem; }
         body .panel.projects .content .project-button .project-header {
           display: flex;
           flex-direction: row;
@@ -272,7 +276,8 @@ body {
             vertical-align: middle; }
         body .panel.projects .content .project-button .project-info {
           padding: 0rem 1.25rem 1.25rem 1.25rem;
-          text-align: center; }
+          text-align: center;
+          font-size: 1.125rem; }
         body .panel.projects .content .project-button.bb-button {
           border-color: #ff6699;
           color: #ff6699; }

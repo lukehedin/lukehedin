@@ -27,6 +27,14 @@
                 path {
                     fill: $flame-orange;
                 }
+
+                &:hover {
+                    path {
+                        fill: $light-grey;
+                        stroke: $flame-orange;
+                        stroke-width: rem-calc(0.5);
+                    }
+                }
             }
         }
 
@@ -39,7 +47,7 @@
             margin-bottom: rem-calc(40);
             margin-top: rem-calc(40);
             width: 100%;
-            max-width: rem-calc(400);
+            max-width: rem-calc(420);
 
             .project-header {
                 display: flex;
@@ -66,6 +74,7 @@
             .project-info {
                 padding: rem-calc(0 20 20 20);
                 text-align: center;
+                font-size: $tiny-text;
             }
 
             &.bb-button {
