@@ -1,0 +1,105 @@
+&.projects {
+    background-color: $light-grey;
+
+    header {
+        color: $flame-orange;
+    }
+
+    .content {
+        .paragraph {
+            color: $dark-grey;
+            text-align: center;
+            padding: rem-calc(10 0);
+            
+            @media #{$medium-device}{
+                margin: rem-calc(0 80);
+            }
+
+            svg {
+                display: inline-block;
+                width: rem-calc(64);
+                height: rem-calc(64);
+             
+                @media #{$medium-device}{
+                    margin: rem-calc(20);
+                }
+
+                path {
+                    fill: $flame-orange;
+                }
+            }
+        }
+
+        .project-button {
+            display: block;
+            border: rem-calc(2) solid; 
+            overflow: hidden;
+            border-radius: rem-calc(22);
+            margin: auto;
+            margin-bottom: rem-calc(40);
+            margin-top: rem-calc(40);
+            width: 100%;
+            max-width: rem-calc(400);
+
+            .project-header {
+                display: flex;
+                flex-direction: row;
+                font-size: $small-text;
+                font-weight: bold;
+                padding: rem-calc(10 20);
+                text-align: center;
+
+                .project-name {
+                    display: inline-block;
+                    flex-grow: 1;
+                    line-height: rem-calc(64);
+                }
+
+                svg {
+                    display: inline-block;
+                    height: rem-calc(64);
+                    width: rem-calc(64);
+                    vertical-align: middle;
+                }
+            }
+
+            .project-info {
+                padding: rem-calc(0 20 20 20);
+                text-align: center;
+            }
+
+            &.bb-button {
+                border-color: $bb-pink;
+                color: $bb-pink;
+
+                &:hover {
+                    border-color: $bb-pink;
+                    color: $light-grey;
+                    background-color: $bb-pink;
+                }
+            }
+
+            &.git-button{
+                color: $flame-orange;
+
+                svg {
+                    path {
+                        fill: $flame-orange;
+                    }
+                }
+
+                &:hover {
+                    border-color: $flame-orange;
+                    color: $light-grey;
+                    background-color: $flame-orange;
+
+                    svg {
+                        path {
+                            fill: $light-grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

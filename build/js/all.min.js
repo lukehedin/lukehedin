@@ -27,9 +27,9 @@ var NightPanel = {
         //Scaling elements
         
         //Mountain A
-        LukeHedin.scaleTriangle('.mountain-a', 3.8, 'bottom', 3.8);
+        LukeHedin.scaleTriangle('.mountain-a', 3.9, 'bottom', 3.9);
         //Mountain B
-        LukeHedin.scaleTriangle('.mountain-b', 3, 'bottom', 3);
+        LukeHedin.scaleTriangle('.mountain-b', 3.2, 'bottom', 3.2);
 
         //Treeline A
         LukeHedin.scaleRect('.treeline-a', 12);
@@ -40,7 +40,7 @@ var NightPanel = {
 
         //Pinetrees
         LukeHedin.scaleTriangle('.pinetree-a', 22, 'bottom', 3.5);
-        LukeHedin.scaleTriangle('.pinetree-b', 20, 'bottom', 3);
+        LukeHedin.scaleTriangle('.pinetree-b', 20, 'bottom', 3.1);
         LukeHedin.scaleTriangle('.pinetree-c', 24, 'bottom', 5.3);
         LukeHedin.scaleTriangle('.pinetree-d', 24, 'bottom', 3.2);
         LukeHedin.scaleTriangle('.pinetree-e', 26, 'bottom', 5.4);

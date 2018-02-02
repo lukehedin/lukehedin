@@ -6,6 +6,7 @@
 }
 
 /* rem-calc function for easy pixel to rem conversion*/
+$font-size-root: 16px;
 @function rem-calc($values) {
     $rem-values: ();
     

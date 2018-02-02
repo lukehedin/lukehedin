@@ -5,16 +5,6 @@
     <body>
     <div class="panel night">
         <div class="star-container"></div>
-        <header class="confined">
-            <div class="headings">
-                <h1>
-                    luke hedin
-                </h1>
-                <h2>
-                    web design &amp; development
-                </h2>
-            </div>
-        </header>
         <div class="content">
             <div class="triangle mountain mountain-a"></div>
             <div class="treeline treeline-a"></div>
@@ -30,8 +20,17 @@
                 <div class="fire"></div>
             </div>
         </div>
+        <header class="confined">
+            <div class="headings">
+                <h1>
+                    Luke Hedin
+                </h1>
+                <h2>
+                    Web Development &amp; Design
+                </h2>
+            </div>
+        </header>
         <footer>
-            <div class="arrow-down"></div>
         </footer>
     </div>
     <div class="panel experience">
@@ -41,15 +40,15 @@
         <div class="content confined">
             <div class="paragraph">
                 @@include("../images/experience.svg")
-                I've got over four years professional experience developing web applications with huge user bases. When it comes to the web, I'm comfortable working in both the front and back end.
+                I've got over four years professional experience developing web applications with huge user bases. I'm comfortable working in the front end and back end.
             </div>
             <div class="paragraph">
                 @@include("../images/collaborate.svg")
-                I'm a natural collaborator and am used to working out technical specifications with clients, product owners and other developers. I pride myself on my communication skills. 
+                I'm a natural collaborator and am used to working out designs and technical specifications with clients, product owners and other developers.
             </div>
             <div class="paragraph">
                 @@include("../images/code.svg")
-                I love jumping into new code, and am not intimidated by unfamiliar languages or frameworks. The more you learn, the better you become at learning.
+                I have a wide set of programming skills and don't get intimidated by unfamiliar languages or frameworks. I aim to write code that is readable and scalable.
             </div>    
         </div>
     </div>
@@ -100,7 +99,31 @@
             </div>
         </div>
     </div>
-    <div class="panel about">
+    <div class="panel projects">
+        <header>
+            Personal Projects
+        </header>
+        <div class="content confined">
+            <a href="http://www.birthdaybounty.com.au" class="project-button bb-button">
+                <div class="project-header">
+                    @@include("../images/bb-flag.svg")
+                    <div class="project-name">
+                        Birthday Bounty
+                    </div>
+                </div>
+                <div class="project-info">
+                    Birthday Bounty is a website that helps you find birthday deals in your area. The site was built using Angular and is mobile friendly.
+                </div>
+            </a>
+            <a href="https://github.com/lukehedin" class="project-button git-button">
+                <div class="project-header">
+                    @@include("../images/social-github.svg")
+                    <div class="project-name">
+                        View more on GitHub
+                    </div>
+                </div>
+            </a>
+        </div>
         <header>
             About
         </header>
@@ -109,29 +132,12 @@
                 I'm currently based in Melbourne, Australia.                   
             </div>
             <div class="paragraph">
-                When I'm not working, I like diving into a good book, listening to hit music from the 70s/80s or spending time on these personal projects.
-            </div>
-            <div class="paragraph projects">
-                <a href="http://www.birthdaybounty.com.au" class="bb-link">
-                    @@include("../images/bb-flag.svg")
-                    <div>
-                        Birthday Bounty
-                    </div>
-                </a>
-                <div class="paragraph">
-                        Birthday Bounty is a website that helps you find birthday deals in your area. The site was built using Angular and is mobile friendly.
-                </div>
-                <a href="https://github.com/lukehedin">
-                    @@include("../images/social-github.svg")
-                    <div>
-                        View more on GitHub
-                    </div>
-                </a>
+                When I'm not coding, I like to dive into a good book or listen to hit music from the 70s/80s.
             </div>
             <div class="paragraph">
                 If you'd like to get in contact or find out more about what I do, I'd love to hear from you.
             </div>
-            <div class="paragraph socials">
+            <div class="paragraph">
                 <a href="https://au.linkedin.com/in/lukehedin">@@include("../images/social-linkedin-circular.svg")</a>
                 <a href="https://www.instagram.com/lukehedin">@@include("../images/social-instagram-circular.svg")</a>
                 <a href="https://www.facebook.com/luke.hedin">@@include("../images/social-facebook-circular.svg")</a>

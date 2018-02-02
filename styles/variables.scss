@@ -1,7 +1,3 @@
-//LH: Holds common SCSS variables
-
-$font-size-root: 16px;
-
 //Colours (or colors)
 $dark-ground: #0e0f12;
 $light-grey: #fbfbfc;
@@ -11,11 +7,28 @@ $flame-orange: #d38c1d;
 $dark-blue: #527b8a;
 $bb-pink: #ff6699;
 
-//Device media queries - mobile first design
+//Device media queries
+//tiny-device by default - mobile first design
+$small-device: "only screen and (min-width: 480px)";
+$medium-device: "only screen and (min-width: 650px)";
+$large-device: "only screen and (min-width: 950px)";
+$huge-device: "only screen and (min-width: 1024px)";
 
-$portrait-phone: "only screen and (max-width : 320px)";
-$landscape-phone: "only screen and (max-width : 320px)";
+$small-text: rem-calc(18);
+$large-text: rem-calc(42);
+$huge-text: rem-calc(116);
 
-@media #{$landscape-phone} {
-  background: red;
+@mixin smallDeviceVars($px) {
+
+}
+
+
+$tiny-text: rem-calc(18);
+$small-text: rem-calc(26);
+$medium-text: rem-calc(42);
+$large-text: rem-calc(72);
+$huge-text: rem-calc(116);
+
+@media #{$small-device} {
+  
 }
